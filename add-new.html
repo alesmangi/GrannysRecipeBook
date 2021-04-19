@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Recipe</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .form-container{
+            width: 40%;
+            margin: 1rem 0;
+        }
+
+        form{
+            display: flex;
+            justify-content: space-evenly;
+            flex-flow: row;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+        }
+
+        form>*{
+            width: 100%;
+            align-self: center;
+        }
+
+        input,textarea{
+            height: 2rem;
+            width: 100% !important;
+        }
+        .main-container{
+            margin: 0 2rem;
+            width: 100%;
+        }
+
+        .button-container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        label{
+            font-size: 14px;
+            color: darkgray;
+            font-family: "Bodoni MT Black";
+            margin-top: 4rem;
+        }
+        button{
+            width: 20rem;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h2 class="text-red text-center" >New Recipe</h2>
+    <hr>
+    <div class="main-container">
+        <form action="linking.php" method="post" enctype="multipart/form-data">
+            <div class="form-container">
+                <label for="">TITLE</label>
+                <input type="text" class="form-container" name="title" placeholder="Enter the title of recipe" required>
+                <label for="">TIME</label>
+                <input type="text" class="form-container" name="time" placeholder="E.g in 2minutes" required>
+                <label for="">LIKE COUNT</label>
+                <input type="number" class="form-container" name="bookmarks" placeholder="E.g 30" required>
+                <label for="">OWNER NAME</label>
+                <input type="text" class="form-container" name="owner_name" placeholder="Recipe from e.g John Doe" required>
+                <label for="">INGREDIENTS</label>
+                <textarea name="ingredients" cols="30" rows="3" placeholder="Ingredients seperated by commas e.g 1kg meat, 2litres of milk" required></textarea>
+                <label for="">RECIPE STEPS</label>
+                <textarea name="recipe" cols="30" rows="3" placeholder="Steps separated by commas e.g put 2kg of meat in water, Add salt" required></textarea>
+                <input type="hidden" name="action" value="save_recipe">
+            </div>
+            <div class="form-container">
+                <label for="">PHOTO 1</label>
+                <input type="file" name="photo_1" required>
+                <label for="">PHOTO 2</label>
+                <input type="file" name="photo_2">
+                <label for="">PHOTO 3</label>
+                <input type="file" name="photo_3">
+                <label for="">PHOTO 4</label>
+                <input type="file" name="photo_4">
+                <label for="">NUTRITIONAL VALUE</label>
+                <textarea name="nutrition" cols="30" rows="3" placeholder="Enter the nutrition of the recipe"></textarea>
+                <label for="">NOTES</label>
+                <textarea name="notes" cols="30" rows="3" placeholder="Enter any extra notes about this recipe"></textarea>
+            </div>
+            <div class="button-container">
+                <button class="recipe-button">Save Recipe</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
