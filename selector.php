@@ -1,13 +1,13 @@
 <?php
 function getConnection(){
 	$host = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname= "recipe_db";
+	$username = "witonl_recipies";
+	$password = "LKWDp}jHv_5l";
+	$dbname= "witonl_recipes";
 
 	$conn = mysqli_connect($host,$username,$password,$dbname);
 	if(!$conn){
-		die("Failed to connect to the database");
+		die("Failed to connect to the database.");
 	}
 	return $conn;
 }
