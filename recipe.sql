@@ -52,9 +52,8 @@ CREATE TABLE IF NOT EXISTS `recipe` (
 
 INSERT INTO `recipe` (`id`, `title`, `time`, `bookmarks`, `owner_name`, `recipe`, `ingredients`, `photo_1`, `photo_2`, `photo_3`, `photo_4`, `nutrition`, `notes`) VALUES
 (1, 'This is the title of the recipe', 'in 3 minutes', 50, 'Kim Jun', 'Put the oil in water', 'Water, Oil', '', 'warning-icons.png', '', '', '', ''),
-(2, 'Wonderful recipe', 'in 3 minutes', 50, 'Kim Jun', 'Put the oil in water', 'Water, Oil', 'img-1.jpeg', 'warning-icons.png', '', '', '', '');
-
--- --------------------------------------------------------
+(2, 'Wonderful recipe', 'in 3 minutes', 50, 'Kim Jun', 'Put the oil in water', 'Water, Oil', 'img-1.jpeg', 'warning-icons.png', '', '', '', ''),
+(3, 'Pesto Pasta', '15 minutes', 20, 'Aless Mangialardo', 'Cook pasta, cook rest of ingredients in another pan, mix once done', 'pasta, onions, pesto, olive oil', 'warning-icons.png', 'warning-icons.png', '', '', '', '');
 
 --
 -- Table structure for table `users`
